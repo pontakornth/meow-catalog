@@ -1,6 +1,6 @@
 <template>
-    <div class="p-4 rounded border shadow-md">
-        <img :src="imageUrl" alt="Cat(s)" />
+    <div class="p-4 rounded border shadow-md w-3/4 mx-auto mb-4">
+        <img :src="imageUrl" alt="Cat(s)"  class="w-full mx-auto"/>
     </div>
 </template>
 

@@ -3,12 +3,13 @@
   <p v-if="error">Erro แอ๊ด ๆ</p>
   <p v-if="!data">Loading...</p>
   <p v-else>
-    <img v-for="catData in data" :key="catData.id" :src="catData.url" />
+    <cat-card v-for="catData in data" :key="catData.id" :imageUrl="catData.url" />
   </p>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import CatCard from './components/CatCard.vue'
 import useCats from './useCats'
 
 export default defineComponent({
@@ -20,6 +21,9 @@ export default defineComponent({
       data,
       error
     }
+  },
+  components: {
+    CatCard,
   }
 })
 </script>
