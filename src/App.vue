@@ -1,7 +1,7 @@
 <template>
-  <h1 class="text-5xl font-bold">Meow CATalog</h1>
-  <p v-if="error">Erro แอ๊ด ๆ</p>
-  <p v-if="!data">Loading...</p>
+  <h1 class="text-5xl font-bold mb-4">Meow CATalog</h1>
+  <p class="text-red-500 font-bold mb-4" v-if="error">Error แอ๊ด ๆ {{error}}</p>
+  <p class="text-green-500 font-bold mb-4" v-if="!data">Loading cats...</p>
   <p v-else>
     <cat-card v-for="catData in data" :key="catData.id" :imageUrl="catData.url" />
   </p>
@@ -35,6 +35,6 @@ export default defineComponent({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  @apply py-6;
 }
 </style>
