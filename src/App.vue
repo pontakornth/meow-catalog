@@ -7,14 +7,20 @@
     {{ breed.name }}
   </option>
   </select>
-  <p class="text-green-500 font-bold mb-4" v-if="!catData">Loading cats...</p>
+  <p class="text-green-500 font-bold mb-4" v-if="!catData">
+    <skeleton-card />
+    <skeleton-card />
+    <skeleton-card />
+    <skeleton-card />
+  </p>
   <p v-else>
     <cat-card v-for="cat in catData" :key="cat.id" :imageUrl="cat.url" />
   </p>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue'
+import { computed, defineComponent, ref, watch } from 'vue'
+import SkeletonCard from './components/SkeletonCard.vue'
 import CatCard from './components/CatCard.vue'
 import useCats, { useCatBreeds } from './useCats'
 
@@ -35,6 +41,7 @@ export default defineComponent({
   },
   components: {
     CatCard,
+    SkeletonCard,
   }
 })
 </script>
