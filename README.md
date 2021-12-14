@@ -3,7 +3,7 @@ A site full of wholesome cat picture powered by [TheCatAPi](https://thecatapi.co
 
 ## Setup
 You need to environment variable `CAT_API` to get images of cat with ordering. You can either set
-in the `.env` file or the environment variable you wnated.
+in the `.env` file or the environment variable.
 Plase install the dependencies with `npm install` before running or building.
 
 ## Running
